@@ -59,14 +59,17 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:text="Valider" >
+        android:text="@string/valider"
+        android:background="@drawable/boutons_coins_arrondis"
+        >
+
         <requestFocus />
     </Button>
     <Button
         android:id="@+id/buttonAnnuler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Annuler" />
+        android:text="@string/annuler" />
 
     <TextView
         android:id="@+id/textViewMessage"

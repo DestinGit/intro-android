@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Intro</string>
+    <string name="valider">valider</string>
+    <string name="annuler">Annuler</string>
 </resources>
