@@ -1,5 +1,7 @@
 package db.fr.intro;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -55,9 +57,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             }
         }
         if (v == buttonAnnuler) {
-            String lsText = getResources().getString(R.string.toastValue);
+//            alertDialogFn();
+            alertDialog2BtnFn();
+
+//            String lsText = getResources().getString(R.string.toastValue);
             // Afficher le Toast fenêtre
-            Toast.makeText(getBaseContext(), lsText, Toast.LENGTH_LONG).show();
+//            Toast.makeText(getBaseContext(), lsText, Toast.LENGTH_LONG).show();
            // Toast.makeText(getBaseContext(), "0 Saisies validées !!!", Toast.LENGTH_LONG).show();
         }
         if (v == checkBoxVivant) {
@@ -71,5 +76,60 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         } else {
             editTextPwd.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         }
+    }
+
+    private void alertDialog2BtnFn() {
+        DialogInterface.OnClickListener ecouteurClicBDD1 = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int codeBouton) {
+                textViewMessage.setText("Vous avez cliquer sur le bouton OK");
+            }
+        };
+        DialogInterface.OnClickListener ecouteurClicBDD2 = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int codeBouton) {
+                textViewMessage.setText("Vous avez cliquer sur le bouton ANNULER");
+            }
+        };
+
+        String lsTitre = "Alerte";
+        String lsMessage = "Appliquez !";
+        String lsTexteBoutonOK = "OK";
+        String lsTexteBoutonAnnuler = "ANNULER";
+
+        AlertDialog.Builder ad = new AlertDialog.Builder(this);
+        ad.setTitle(lsTitre);
+        ad.setMessage(lsMessage);
+        ad.setNeutralButton(lsTexteBoutonOK, ecouteurClicBDD1);
+        ad.setNegativeButton(lsTexteBoutonAnnuler, ecouteurClicBDD2);
+        ad.show();
+
+    }
+
+    private void alertDialogFn() {
+/*
+ * LA BOITE DE DIALOGUE
+ */
+
+// --- L'écouteur pour le clic
+// Le code peut être en dehors de la méthode utilisatrice
+        DialogInterface.OnClickListener ecouteurClicBDD = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int codeBouton) {
+                textViewMessage.setText("Post alerte OK");
+            }
+        };
+
+
+        String lsTitre = "Alerte";
+        String lsMessage = "Appliquez !";
+        String lsTexteBoutonOK = "OK";
+
+        AlertDialog.Builder ad = new AlertDialog.Builder(this);
+        ad.setTitle(lsTitre);
+        ad.setMessage(lsMessage);
+        ad.setNeutralButton(lsTexteBoutonOK, ecouteurClicBDD);
+        ad.show();
+
     }
 }
