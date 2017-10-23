@@ -27,7 +27,7 @@ public class Acteur2 extends AppCompatActivity implements View.OnClickListener, 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acteur2);
 
-        // Associer les variqbles aux ID représentant les éléments du DOM (view)
+        // Associer les variables aux ID représentant les éléments du DOM (view)
         textViewMessage = (TextView)findViewById(R.id.textViewMessage);
         editTextNom = (EditText) findViewById(R.id.editTextNom);
         editTextPrenom = (EditText) findViewById(R.id.editTextPrenom);
