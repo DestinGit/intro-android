@@ -9,9 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".acteur1" />
-        <activity android:name=".Acteur2">
-        </activity>
+        <activity android:name=".Acteur2" />
         <activity android:name=".ActeurExo">
+
             <!--
                 <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +21,14 @@
             -->
         </activity>
         <activity android:name=".Login">
+        </activity>
+        <activity android:name=".liste_deroulante">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
