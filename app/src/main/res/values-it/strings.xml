@@ -2,4 +2,5 @@
 <resources>
     <string name="valider">validare</string>
     <string name="annuler">Annulare</string>
+    <string name="toastValue">Taost Italiano</string>
 </resources>

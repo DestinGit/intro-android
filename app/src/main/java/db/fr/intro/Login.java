@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextLogin;
@@ -52,6 +53,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             } else {
                 textViewMessage.setText("La connexion a échoué. Vérifier vos identifiants");
             }
+        }
+        if (v == buttonAnnuler) {
+            String lsText = getResources().getString(R.string.toastValue);
+            // Afficher le Toast fenêtre
+            Toast.makeText(getBaseContext(), lsText, Toast.LENGTH_LONG).show();
+           // Toast.makeText(getBaseContext(), "0 Saisies validées !!!", Toast.LENGTH_LONG).show();
         }
         if (v == checkBoxVivant) {
             checkOfCheckBox();
