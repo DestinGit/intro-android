@@ -25,6 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:text="Saisissez votre prénom ..."
+        android:textColor="#CECECE"
+        android:textStyle="italic"
         android:ems="10" >
         <requestFocus />
     </EditText>
@@ -38,6 +41,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:text="Saisissez votre nom ..."
+        android:textColor="#CECECE"
+        android:textStyle="italic"
         android:ems="10" >
         <requestFocus />
     </EditText>
@@ -45,7 +51,11 @@
         android:id="@+id/buttonValider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Valider" />
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="Valider" >
+        <requestFocus />
+        </Button>
     <Button
         android:id="@+id/buttonAnnuler"
         android:layout_width="match_parent"
