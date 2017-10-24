@@ -20,10 +20,11 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".Login"></activity>
-        <activity android:name=".liste_deroulante">
-        </activity>
+        <activity android:name=".Login" />
+        <activity android:name=".liste_deroulante"></activity>
         <activity android:name=".ListeView1">
+        </activity>
+        <activity android:name=".ListeView2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
