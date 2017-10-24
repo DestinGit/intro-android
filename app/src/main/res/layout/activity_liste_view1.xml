@@ -12,6 +12,6 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/liste"
-        android:entries="@array/fonctions"/>
+        android:id="@+id/liste" />
+        <!--android:entries="@array/fonctions"/>-->
 </RelativeLayout>
